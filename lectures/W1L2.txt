@@ -9,6 +9,8 @@ npx create-react-app react-intro - helps us create a new React template - react 
 
 REACT COMPONENTS START WITH AN UPPERCASE LETTER
 
+***Make sure in src folder that we add another folder titled ' components' and in the src/app.js we add import React from 'react';
+
 IMPORTANT: When we create a project via create-react-app, we are installing React. Within our React files, 
 when we write import React from 'react', we can write in JSX within that file without needing to add any extra dependencies.
  
