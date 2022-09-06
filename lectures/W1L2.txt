@@ -1,0 +1,14 @@
+-React Developer Tools on Chrome extensions allows for componenent tab to look at our react projects
+
+-npm install package -  allows us to install
+
+important termianl command to know
+npx create-react-app react-intro - helps us create a new React template - react inro is the only thing you will change. Make it the name of your react app
+
+ component is a function
+
+REACT COMPONENTS START WITH AN UPPERCASE LETTER
+
+IMPORTANT: When we create a project via create-react-app, we are installing React. Within our React files, 
+when we write import React from 'react', we can write in JSX within that file without needing to add any extra dependencies.
+ 
