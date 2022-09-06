@@ -9,8 +9,17 @@ npx create-react-app react-intro - helps us create a new React template - react 
 
 REACT COMPONENTS START WITH AN UPPERCASE LETTER
 
+*Check /React/assignments/my-first-project for notes from Andrew in LECTURE
 ***Make sure in src folder that we add another folder titled ' components' and in the src/app.js we add import React from 'react';
-
+AND delete all thats between divs in app.js
 IMPORTANT: When we create a project via create-react-app, we are installing React. Within our React files, 
 when we write import React from 'react', we can write in JSX within that file without needing to add any extra dependencies.
+
+JSX (JavaScript XML) is an extension to JavaScript that allows us to write code that closely resembles HTML without 
+having to make it a string. This is the preferred way to use React.
+
+rafce from ES7+ React extension in Chrome to help autopopulate code in VS code
  
+ PROPS
+ Keys match prop name  
+ Props can not be changed
