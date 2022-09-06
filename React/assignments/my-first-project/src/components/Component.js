@@ -11,4 +11,4 @@ const Component = () => {
 
 
 export default Component;
-//allows this to be found andbused in other components
+//allows this to be found and used in other components
