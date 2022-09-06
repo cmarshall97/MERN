@@ -2,7 +2,7 @@
 
 -npm install package -  allows us to install
 
-important termianl command to know
+important terminal command to know
 npx create-react-app react-intro - helps us create a new React template - react inro is the only thing you will change. Make it the name of your react app
 
  component is a function
