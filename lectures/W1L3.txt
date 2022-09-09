@@ -1,0 +1,2 @@
+PROPS
+pass data downwards as everything in React is passed downwards
