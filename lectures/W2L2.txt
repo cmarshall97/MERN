@@ -1,0 +1,1 @@
+e.target.value is how we are going to access what we are typing into the field/ the actual data
