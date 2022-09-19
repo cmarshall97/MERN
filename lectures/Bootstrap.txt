@@ -1,0 +1,11 @@
+-CDN on bootstrap website - copy and paste the CDN CSS only link 
+and paste it in the head section of HTML doc
+
+Bootstrap website -> 'Docs' in top left corner
+
+built on 12 grid system
+
+good idea to have containers and rows
+
+breakpoints are useful when determining the column sizing 
+depending on the size of the screen
