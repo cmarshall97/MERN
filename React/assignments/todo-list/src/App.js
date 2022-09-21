@@ -9,7 +9,13 @@ function App() {
   const submitToDoItem = (e) => {
     e.preventDefault()
     setList([...list,newItem])
-    
+  }
+
+  const deleteToDoItem = (e, i) => {
+    const filteredList = list.filter((item, index) => {
+      list.pop(i);
+      return list
+    })
   }
     
   return (
@@ -24,6 +30,7 @@ function App() {
             return (
               <ul>
                 <li key={index}> {newItem} </li>
+                <button onClick={e=>deleteToDoItem()}> Delete </button>
               </ul>
             );
           })
