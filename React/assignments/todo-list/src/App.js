@@ -3,19 +3,32 @@ import './App.css';
 import {useState} from 'react';
 
 function App() {
-  const [itemInfo,setItemInfo] = useState('')
-  const[list, setList] = useState([])
+  const [newItem,setNewItem] = useState('');
+  const[list, setList] = useState([]);
 
   const submitToDoItem = (e) => {
     e.preventDefault()
-    setList([...list,itemInfo]);
+    setList([...list,newItem])
+    
   }
+    
   return (
     <div >
       <form onSubmit={e => submitToDoItem(e)} >
-        <input type="text" onChange={e=>setItemInfo(e.target.value)} name="itemInfo" value={itemInfo}></input>
+        <input type="text" onChange={e=>setNewItem(e.target.value)} name="newItem" value={newItem}></input>
         <button> Add </button>
       </form>
+      <div>
+        {
+          list.map((newItem, index) => {
+            return (
+              <ul>
+                <li key={index}> {newItem} </li>
+              </ul>
+            );
+          })
+        }
+      </div>
     </div>
   );
 }
