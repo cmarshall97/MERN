@@ -11,11 +11,12 @@ function App() {
     setList([...list,newItem])
   }
 
-  const deleteToDoItem = (e, i) => {
-    const filteredList = list.filter((item, index) => {
-      list.pop(i);
-      return list
-    })
+  const deleteToDoItem = (i) => {
+    const filteredList = list.filter((newItem, index) => {
+      return index!== i;
+    });
+
+    setList (filteredList)
   }
     
   return (
@@ -29,8 +30,8 @@ function App() {
           list.map((newItem, index) => {
             return (
               <ul>
-                <li key={index}> {newItem} </li>
-                <button onClick={e=>deleteToDoItem()}> Delete </button>
+                <li key={index} input='checkbox'> {newItem} </li>
+                <button onClick={e=>deleteToDoItem(index)}> Delete </button>
               </ul>
             );
           })
