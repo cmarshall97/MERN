@@ -1,0 +1,22 @@
+Application Programming Interface - API
+
+first- find base URL
+asychronous or AJAX
+
+make a request
+
+App.js - import useEffect
+
+useEffect handles side effects
+will do an action when the component loads
+used every time a component loads and when state changes in a componenet the component re renders.
+
+useEffect(() =>{
+console.log()})
+
+fetch is a javascript function - only works in the browser
+takes in an endpoint/address we want to fetch data from 
+needs to be given the base url
+fetch('base url')
+
+Promises : pending, fulfilled, rejected
