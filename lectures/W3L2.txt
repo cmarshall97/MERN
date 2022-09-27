@@ -20,3 +20,12 @@ needs to be given the base url
 fetch('base url')
 
 Promises : pending, fulfilled, rejected
+help us handle asynchronous event
+
+AXIOS = LIBRARY OF FUNCTIONS USED TO MAKE  API CALLS
+(no longer need to convert)
+NO  FETCH
+npm install axios 
+import axios from 'axios'
+change fetch to axios.get
+

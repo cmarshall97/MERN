@@ -1,5 +1,6 @@
 import {useState,useEffect} from 'react';
 //useEffect handles side effects
+import axios from 'axios';
 
 import './App.css';
 
@@ -9,20 +10,16 @@ function App() {
 
   useEffect(() =>{
     //base URL from API which is a request to an API endpoint/address
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=807&offset=0')
-    //two functions chained together on fetch function
-    //.then handles success
-    //.catch handles any errors
-    .then((result)=>{
-      return result.json() //convert what we get back to json
-    }).then((res)=>{
+    axios.get('https://pokeapi.co/api/v2/pokemon?limit=807&offset=0')
+    //no longer need to convert to json (axios already does that)
+    .then((res)=>{
       console.log(res)
-      setState(res.results)
-    }).catch((error)=>{
+      setState(res.data.results) 
+    }).catch((error)=>{ //handles the errors
       console.log(error)
     })
   },[])
-  //dependency array is an empy array where there is no conditiion in which it should run again 
+  //dependency array is an empy array where there is no condition in which it should run again 
 
   return (
     <div className="App">
