@@ -1,13 +1,16 @@
-import {useParams} from 'react';
+import {useParams} from 'react-router-dom';
 
 const UsingParams = (props) => {
 
-    const {num,word,color,backColor} = useParams()
+    const {word,color,backColor} = useParams()
     return(
         <div>
-            <h2>The number is : {num} </h2>
-            <h2 style={color} >The word is : {word} </h2>
-            
+            {
+                isNaN(word) ? 
+                <h2 style={color} >The word is : {word} </h2>
+                :
+                <h2>The number is : {word} </h2>
+            }
         </div>
     )
 }

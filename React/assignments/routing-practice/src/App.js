@@ -29,8 +29,6 @@ function App() {
         <div className="App">
           <Routes> ///everything inside of me is going to need a particular route component
             <Route path="/home" element={<Home/>}/>
-            {/* <Route path="/about" element={<About/>}/> */}
-            <Route path="/:num" element={<UsingParams/>}/>
             <Route path="/:word" element={<UsingParams/>}/>
             <Route path="/:word/:color/:backColor" element={<UsingParams/>}/>
           </Routes>
