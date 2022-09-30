@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter,Routes, Route, Link} from 'react-router-dom';
 import Home from './components/Home';
-import About from './components/About';
+// import About from './components/About';
+import UsingParams from './components/UsingParams';
 
 // const Home = (props)=>{
 //   return(
@@ -27,9 +28,11 @@ function App() {
     <BrowserRouter>
         <div className="App">
           <Routes> ///everything inside of me is going to need a particular route component
-            <Route path="/" element={<Home/>}/>
-            <Route path="/about" element={<About/>}/>
-            
+            <Route path="/home" element={<Home/>}/>
+            {/* <Route path="/about" element={<About/>}/> */}
+            <Route path="/:num" element={<UsingParams/>}/>
+            <Route path="/:word" element={<UsingParams/>}/>
+            <Route path="/:word/:color/:backColor" element={<UsingParams/>}/>
           </Routes>
         </div>
     </BrowserRouter>
