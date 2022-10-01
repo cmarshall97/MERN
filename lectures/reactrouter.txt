@@ -1,9 +1,9 @@
-
+Steps in routing in REACT
 
 create-react Application
 
 npm install react-router-dom
--install this inside your poject but make sure itis not already running by using npm start
+-install this inside your poject but make sure it is not already running from using npm start
 
 App.js file
 BrowserRouter = overall container
