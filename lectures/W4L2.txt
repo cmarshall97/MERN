@@ -11,7 +11,9 @@ Backend...
 configure your server:
 
 const express = require("express");
-
 const app = express();
+const PORT = 8000
 
 app.listen() - function that binds and listens for connections on the specified host and port
+
+4)nodemon server.js
