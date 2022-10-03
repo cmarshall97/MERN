@@ -1,11 +1,11 @@
-const { response } = require('express');
+const { response } = require('express'); //one video used it but not necessary
 
 const express = require('express'); //import express
-const app = express();
+const app = express(); //store express in the app variable
 const PORT = 8000 //environment varible
 
 const {faker} = require('@faker-js/faker'); // import faker by destructuri faker from required statement
-const { request } = require('https');
+
 
 app.use(express.json()); //allows us to parse JSON objects coming in from POSTS and PUT requests
 app.use(express.urlencoded({extended: true})); //allows us to parse strings and arrays comig in with JSON object

@@ -5,7 +5,7 @@ Postman = tool used to enable us to make requests and save them
 
 Backend...
 1) Server.js
-2) Npm init in terminal
+2) Npm init  (gives us package.json wherewe can see what our dependencies are)
 3) Npm install express
 
 configure your server:
@@ -17,3 +17,23 @@ const PORT = 8000
 app.listen() - function that binds and listens for connections on the specified host and port
 
 4)nodemon server.js
+
+//app/.get/post/put/delete (HTTP verb functions)
+///app.listen(runs the serve)
+//app.use means any request sent through this server will go through the middleware functions first - the below on lines 25-26
+
+app.use(express.json()); //allows us to parse JSON objects coming in from POSTS and PUT requests
+app.use(express.urlencoded({extended: true})); //allows us to parse strings and arrays comig in with JSON object
+
+
+LESSON 3
+
+when we type in a url we are sending in a request for an object. which returns a key value pair
+
+GET is requesting data {KEY:VALUE}
+POST is the client sending data via form for it to do something without (FORM DATA)
+
+
+POST EXAMPLE:
+site.com -> puts the form data in to an {Object} -> hits the middleware function s that out the object in to a body that then hits our route -> 
+-> converts to json and responds back to the client
