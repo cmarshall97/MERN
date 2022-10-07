@@ -3,7 +3,7 @@ const app = express();
 
 // Express Middleware functions
 // make sure these lines are above any app.get or app.post code blocks
-app.use(express.json()); //allows us to parse JON objects coming in from POSTS and PUT requests
+app.use(express.json()); //allows us to parse JSON objects coming in from POSTS and PUT requests
 app.use(express.urlencoded({extended: true})); //allows us to parse strings and arrays comig in with JSON object
 
 app.get("/api/welcome", (request,response)=>{
