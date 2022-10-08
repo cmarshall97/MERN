@@ -1,0 +1,17 @@
+server folder structure...
+
+CONFIG - connection to mongodb
+ROUTES - list of all endpoint paths (all possible URLs)
+CONTROLLERS- list of functions for endpoints
+MODELS- inivdual files for each collection/mdoel/schema
+
+server.js
+
+start a project:
+
+create folder structure above
+open terminal in server.js file
+ terminal commands
+npm init (initializes project)
+npm install mongoose express  (installs mongoose and express)
+nodemon server.js ()
