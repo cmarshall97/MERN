@@ -1,7 +1,9 @@
-const UserController = require('../controllers/user.controllers')
+const JokeController = require('../controllers/jokes.controllers')
 
 module.exports = (app) => {
-    app.post('./api/alljokes', UserController.addUser),
-    app.get('/api/allUsers',UserController.getAllUsers),
-    app.get('/api/findById/:id',UserController.findById),
+    app.get('/api/jokes',JokeController.getAllJokes),
+    app.post('./api/jokes', JokeController.addJoke),
+    app.get('/api/jokes/:_id',JokeController.findById),
+    app.put('/api/jokes/:_id',JokeController.updateById),
+    app.delete('/api/jokes/:_id',JokeController.deleteById)
 }

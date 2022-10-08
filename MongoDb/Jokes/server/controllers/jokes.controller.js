@@ -1,8 +1,8 @@
-const User = require('../models/user.model')
+const Joke = require('../models/jokes.model')
 
 
-const addUser = (req,res)=> {
-    User.create(req.body)
+const addJoke = (req,res)=> {
+    Joke.create(req.body)
     .then((result)=>{
         res.json(result)
     }).catch((err)=>{
@@ -10,8 +10,8 @@ const addUser = (req,res)=> {
     })
 }
 
-const getAllUsers = (req, res)=> {
-    User.find(req.body)
+const getAllJokes = (req, res)=> {
+    Joke.find(req.body)
     .then((result)=>{
         res.json(result)
     }).catch((err)=>{
@@ -20,7 +20,25 @@ const getAllUsers = (req, res)=> {
 }
 
 const findById = (req, res)=> {
-    User.findOne({id:req.params.id})
+    Joke.findOne({_id:req.params.id})
+    .then((result)=>{
+        res.json(result)
+    }).catch((err)=>{
+        console.log(err)
+    })
+}
+
+const updateById = (req, res)=> {
+    Joke.updateOne({_id:req.params.id})
+    .then((result)=>{
+        res.json(result)
+    }).catch((err)=>{
+        console.log(err)
+    })
+}
+
+const deleteById = (req, res)=> {
+    Joke.remove({_id:req.params.id})
     .then((result)=>{
         res.json(result)
     }).catch((err)=>{
@@ -30,7 +48,9 @@ const findById = (req, res)=> {
 
 //functions exported so we can use them elsewhere
 module.exports ={
-    addUser,
-    getAllUsers,
-    findById
+    addJoke,
+    getAllJokes,
+    findById,
+    updateById,
+    deleteById
 }
