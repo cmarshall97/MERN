@@ -1,4 +1,4 @@
-const Joke = require('../models/jokes.model')
+const Joke = require('../models/jokes.model.js')
 
 
 const addJoke = (req,res)=> {
@@ -11,7 +11,7 @@ const addJoke = (req,res)=> {
 }
 
 const getAllJokes = (req, res)=> {
-    Joke.find(req.body)
+    Joke.find()
     .then((result)=>{
         res.json(result)
     }).catch((err)=>{

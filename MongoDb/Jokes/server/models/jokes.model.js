@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const JokeSchema = new mongoose.Schema ({
     setup: String,
     punchline: String,
-},{timestamps:true})
+},{timestamps:true})//gives us updated at and created at
 
 //create a new model/collection in the database
 const Joke = mongoose.model('Joke',JokeSchema)
