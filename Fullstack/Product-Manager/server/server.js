@@ -2,10 +2,11 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const port = 8000;
-//mongoose needs to be before the routes for database to connect
 
+//requiring mongoose needs to be before the routes for database to connect
 require('./config/mongoose.config'); 
 
+//Middleware for formatting and allowing POST requests
 app.use(express.json());                           /* allows JSON Objects to be posted */
 app.use(express.urlencoded({ extended: true }));   /* allows JSON Objects with strings and arrays*/
 
@@ -14,7 +15,6 @@ app.use(
         origin: 'http://localhost:3000',
 }),
 )
-
 
 /* This is a short-hand notation we use: */
 require('./routes/product.routes')(app);
