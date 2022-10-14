@@ -1,4 +1,4 @@
-server folder structure...
+back end-server folder structure...
 
 CONFIG - connection to mongodb
 ROUTES - list of all endpoint paths (all possible URLs)
@@ -12,6 +12,6 @@ start a project:
 create folder structure above
 open terminal in server.js file
  terminal commands
-npm init (initializes project)
-npm install mongoose express  (installs mongoose and express)
+npm init -y (initializes project and creates package.json)
+npm install express mongoose  (installs mongoose and express)
 nodemon server.js ()
