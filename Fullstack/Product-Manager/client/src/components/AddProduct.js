@@ -1,26 +1,29 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+import {useNavigate} from 'react-router-dom'
 
 const ProductForm = () => {
     //keep track of what is being typed via useState hook
     const [title, setTitle] = useState(""); 
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
+
+    const navigate = useNavigate() //Used to help us navigate to a different page if the request was successful
+
     //handler when the form is submitted
     const onSubmitHandler = (e) => {
         //prevent default behavior of the submit
         e.preventDefault();
-        //make a post request to create a new person
-        axios.post('http://localhost:8000/api/people', {
+        //make a post request to create a new product
+        axios.post('http://localhost:8000/api/createProduct', {
             title,
             price,
             description      
-        })
-            .then(res=>{
+        }).then(res=>{
                 console.log(res); // always console log to get used to tracking your data!
-                console.log(res.data);
-            })
-            .catch(err=>console.log(err))
+                // console.log(res.data); //used to test server info. Can delete when you start using navigate
+                navigate('/api/allProducts')
+            }).catch(err=>console.log(err))
     }
     
     return (
@@ -41,7 +44,7 @@ const ProductForm = () => {
                 <label>Description</label><br/>
                 <input type="text" onChange = {(e)=>setDescription(e.target.value)}/>
             </div>
-            <input type="submit"/>
+            <button type="submit">Create</button>
         </form>
     )
 }

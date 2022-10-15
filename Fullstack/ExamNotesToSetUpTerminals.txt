@@ -1,0 +1,23 @@
+Create server folder
+-make a server.js file in the server folder
+-open a terminal in that server folder 
+-type in below terminal commands
+
+Terminal commands:
+npm init -y
+npm install express mongoose
+npm install cors
+
+-set up Server.js file
+
+
+Open a second terminal for the front end in project folder (NOT IN SERVER)
+
+Terminal commands:
+npx create-react-app client
+
+NOW YOU HAVE TWO FOLDERS (CLIENT) & (SERVER) AND TWO TERMINALS IN EACH
+
+CLIENT:
+npm install react-router-dom (gives us routing functionality)
+npm install axios
