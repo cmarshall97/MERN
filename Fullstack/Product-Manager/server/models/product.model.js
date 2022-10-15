@@ -9,7 +9,7 @@ const ProductSchema = new mongoose.Schema({
     },
     Description: {
         type:String
-    }
+    },
 },{timestamps:true}) //gives us _id, createdAt and updatedAt
 
 //Product is the name of the collection in the database
