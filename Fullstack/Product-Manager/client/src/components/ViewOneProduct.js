@@ -12,12 +12,12 @@ const OneProduct = () => {
     useEffect(()=>{
         axios.get(`http://localhost:8000/api/product/${id}`)
         .then((res)=> {
-            console.log(res)
-            setProduct(res.data.result)
+            console.log(res.data)
+            setProduct(res.data)
         }).catch((err)=> {
             console.log(err)
         })
-    },[])
+    },[id])//does not matter if id is in there or it is empty. putting ID eliminated the useEffect warning
 
     return (
         <div>
