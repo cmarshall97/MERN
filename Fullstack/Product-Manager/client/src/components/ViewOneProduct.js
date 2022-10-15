@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, {useEffect,useState} from 'react'
-import {useParams, useNavigate} from 'react-router-dom'
+import {useParams, useNavigate, Link} from 'react-router-dom'
 
 
 const OneProduct = () => {
@@ -35,6 +35,7 @@ const OneProduct = () => {
             <h3>{product.title}</h3>
             <p>Price: ${product.price}</p>
             <p>Description: {product.description}</p>
+            <Link to={`/api/update/${product._id}`}>Update Product</Link>
             <button onClick={(e)=>deleteHandler(product._id)}>Delete Product</button>
         </div>
     )
