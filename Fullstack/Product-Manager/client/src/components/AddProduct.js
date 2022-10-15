@@ -14,7 +14,7 @@ const ProductForm = () => {
     const onSubmitHandler = (e) => {
         //prevent default behavior of the submit
         e.preventDefault();
-        //make a post request to create a new product
+        //make a post request to create a new product by sending request to our server to this specific route and storing the object in the database
         axios.post('http://localhost:8000/api/createProduct', {
             title,
             price,

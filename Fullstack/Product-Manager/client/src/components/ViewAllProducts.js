@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, {useState,useEffect} from 'react'
+import{Link} from 'react-router-dom'
 
 
 const ProductList = () => {
@@ -21,7 +22,7 @@ const [list,setList] = useState([])
             {
                 list.map((product)=>(
                     <div>
-                        <p>{product.title}</p>
+                        <Link to= {`/api/product/${product._id}`}>{product.title}</Link>
                     </div>
                 ))
             }
